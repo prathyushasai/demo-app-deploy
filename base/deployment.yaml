@@ -15,11 +15,11 @@ spec:
       containers:
         - name: demo-app
           image: ghcr.io/prathyushasai/demo-app:latest
-          # env:
-          # - name: SECRET
-          #   valueFrom:
-          #     secretKeyRef:
-          #       name: my-secret
-          #       key: secret-key
+          env:
+          - name: SECRET
+            valueFrom:
+              secretKeyRef:
+                name: my-secret
+                key: secret-key
           ports:
             - containerPort: 8080
