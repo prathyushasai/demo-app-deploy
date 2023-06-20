@@ -6,4 +6,4 @@ resources:
 
 images:
 - name: ghcr.io/prathyushasai/demo-app
-  newTag: latest
+  newTag: f2923d60d9423bd84e3adc6828de9d100f08b544
