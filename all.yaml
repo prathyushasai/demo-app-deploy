@@ -25,7 +25,7 @@ spec:
         app: demo-app
     spec:
       containers:
-      - image: ghcr.io/prathyushasai/demo-app:d6f9bc714b859dc3cff49e008e5c3378a8d6d4ae
+      - image: ghcr.io/prathyushasai/demo-app:35a29782184725397e3b6dbfec5c0005894b71c6
         name: demo-app
         ports:
         - containerPort: 8080
