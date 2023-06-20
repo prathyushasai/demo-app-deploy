@@ -31,7 +31,7 @@ spec:
             secretKeyRef:
               key: secret-key
               name: my-secret
-        image: ghcr.io/prathyushasai/demo-app:35a29782184725397e3b6dbfec5c0005894b71c6
+        image: ghcr.io/prathyushasai/demo-app:fa0fd508eb4c2c86ef3253e63613174f7d2fde00
         name: demo-app
         ports:
         - containerPort: 8080
