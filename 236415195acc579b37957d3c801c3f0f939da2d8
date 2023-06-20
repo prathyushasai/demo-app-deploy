@@ -1,1 +1,3 @@
 image: ghcr.io/prathyushasai/demo-app:fa0fd508eb4c2c86ef3253e63613174f7d2fde00
+
+env: stage
