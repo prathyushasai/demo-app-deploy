@@ -25,7 +25,30 @@ spec:
         app: demo-app
     spec:
       containers:
-      - image: ghcr.io/prathyushasai/demo-app:35a29782184725397e3b6dbfec5c0005894b71c6
+      - env:
+        - name: SECRET
+          valueFrom:
+            secretKeyRef:
+              key: secret-key
+              name: my-secret
+        image: ghcr.io/prathyushasai/demo-app:35a29782184725397e3b6dbfec5c0005894b71c6
         name: demo-app
         ports:
         - containerPort: 8080
+---
+apiVersion: external-secrets.io/v1beta1
+kind: ExternalSecret
+metadata:
+  name: my-secret
+spec:
+  data:
+  - remoteRef:
+      key: /value3
+      version: v1
+    secretKey: secret-key
+  refreshInterval: 1h
+  secretStoreRef:
+    kind: ClusterSecretStore
+    name: vault
+  target:
+    name: my-secret
